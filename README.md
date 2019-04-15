@@ -10,6 +10,16 @@ Example: New York City -> New_York_City
 
 ## Usage
 
+The tool can be used in two different ways:
+
+1. Convert one big input file: 
+
 ```sh
-python3 spacy_nre.py --input={PATH_TO_CLEANED_TEXT} --output={PATH_TO_OUTPUT=stdout}
+python3 spacy_ner.py file --input={PATH_TO_CLEANED_TEXT} --output={PATH_TO_OUTPUT=stdout}
+```
+
+2. Convert multiple input files:
+
+```sh
+python3 spacy_ner.py dir --source={PATH_TO_SOURCE_DIR} --target={PATH_TO_TARGET_DIR}
 ```

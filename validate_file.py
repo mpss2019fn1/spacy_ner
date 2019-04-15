@@ -2,7 +2,7 @@ import argparse
 import os
 
 
-class AccessibleFile(argparse.Action):
+class ValidateFile(argparse.Action):
 
     def __call__(self, parser, parser_namespace, values, option_string=None):
         path = os.path.abspath(os.path.expanduser(values))
