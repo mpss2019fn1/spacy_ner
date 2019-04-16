@@ -35,9 +35,8 @@ def _create_arg_parser():
 
 
 def _initialize_threads(args):
-
     for x in range(args.workers):
-        _thread = ThreadWorker(x, args.target, work_queue.pop)
+        _thread = ThreadWorker(x, args.target, work_queue.get)
         _thread.start()
         thread_pool.append(_thread)
 

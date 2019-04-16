@@ -54,7 +54,7 @@ class ThreadWorker(threading.Thread):
         return entity.label_ in constant.ENTITY_LABELS
 
     def _process_file(self, input_file):
-        with input_file.open() as file, open(f"{self._output_directory}{input_file.name}", "w+") as output:
+        with input_file.open() as file, open(f"{self._output_directory}{input_file.name}", "w+", buffering=512000) as output:
             for line in file:
                 doc = self._nlp(line)
                 print(f"{ThreadWorker._replace_entities(doc)}", file=output, end="")
