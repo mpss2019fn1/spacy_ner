@@ -8,6 +8,12 @@ Those phrases may consist of multiple plain words, which are afterwards merged i
 Example: New York City -> New_York_City
 ```
 
+## Requirements
+
+* Python3
+* spacy (```pip3 install spacy```)
+* spacy vocabulary (```python3 -m spacy download en_core_web_sm```)
+
 ## Usage
 
 The tool can be used in two different ways:
